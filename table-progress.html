@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="../sources/bootstrap-4.5.0-dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="table.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6f6285192f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>SCHEDULE CHART</title>
+  </head>
+  <body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-xs navbar-dark bg-dark">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">SET SCHEDULE</a>
+        <a href="#">CHOOSE SCHEDULE</a>
+        <a href="#">EDIT SCHEDULE</a>
+        <a href="#">TRACK PROGRESS</a>
+        <a href="#">OTHER</a>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span onclick="openNav()" class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-brand mx-5" href="#">
+        <button type="submit" class="btn btn-primary mx-2">
+          Subscribe for updates
+        </button>
+        <span class="dropdown">
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Share
+          </button>
+          <div class="dropdown-menu  bg-dark text-light test" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item text-light m-1" href="#"><i class="fab fa-facebook"></i></a>
+            <a class="dropdown-item text-light m-1" href="#"><i class="fab fa-whatsapp"></i></a>
+            <a class="dropdown-item text-light m-1" href="#"><i class="far fa-envelope"></i></a>
+          </div>
+        </span>
+      </div>
+    </nav>
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">SCHEDULE CHART</h3>
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="MORNING">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="AFTERNOON">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="EVENING">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="filter by other">
+        </div>
+
+        </div>
+    </form>
+
+<!-- Editable table -->
+<div class="card">
+  
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr>
+            <th class="text-center"> TODAY</th>
+            <th class="text-center">TOMORROW</th>
+            <th class="text-center">Wed</th>
+            <th class="text-center">Thursday</th>
+            <th class="text-center">Friday</th>
+            <th class="text-center">Sort</th>
+            <th class="text-center">delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pt-3-half" contenteditable="true">8:00 AM</td>
+            <td class="pt-3-half" contenteditable="true">9:00 AM</td>
+            <td class="pt-3-half" contenteditable="true">7:00 AM</td>
+            <td class="pt-3-half" contenteditable="true">11:00 AM</td>
+            <td class="pt-3-half" contenteditable="true">12:30 AM</td>
+            <td class="pt-3-half">
+              <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                    aria-hidden="true"></i></a></span>
+              <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                    aria-hidden="true"></i></a></span>
+            </td>
+            <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0">Delete</button></span>
+            </td>
+          </tr>
+          <!-- This is our clonable table line -->
+          <tr>
+            <td class="pt-3-half" contenteditable="true">4:00</td>
+            <td class="pt-3-half" contenteditable="true">2:00</td>
+            <td class="pt-3-half" contenteditable="true">6:00</td>
+            <td class="pt-3-half" contenteditable="true">9:00</td>
+            <td class="pt-3-half" contenteditable="true">7:00</td>
+            <td class="pt-3-half">
+              <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                    aria-hidden="true"></i></a></span>
+              <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                    aria-hidden="true"></i></a></span>
+            </td>
+            <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0">Delete</button></span>
+            </td>
+          </tr>
+          <!-- This is our clonable table line -->
+          <tr>
+            <td class="pt-3-half" contenteditable="true">6:30</td>
+            <td class="pt-3-half" contenteditable="true">12:45</td>
+            <td class="pt-3-half" contenteditable="true">12:00</td>
+            <td class="pt-3-half" contenteditable="true">1:00</td>
+            <td class="pt-3-half" contenteditable="true">7:50</td>
+            <td class="pt-3-half">
+              <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                    aria-hidden="true"></i></a></span>
+              <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                    aria-hidden="true"></i></a></span>
+            </td>
+            <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0">Delete</button></span>
+            </td>
+          </tr>
+          <!-- This is our clonable table line -->
+          <tr class="hide">
+            <td class="pt-3-half" contenteditable="true">  </td>
+            <td class="pt-3-half" contenteditable="true">  </td>
+            <td class="pt-3-half" contenteditable="true">  </td>
+            <td class="pt-3-half" contenteditable="true"> </td>
+            <td class="pt-3-half" contenteditable="true"> </td>
+            <td class="pt-3-half">
+              <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                    aria-hidden="true"></i></a></span>
+              <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                    aria-hidden="true"></i></a></span>
+            </td>
+            <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0">Delete</button></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Editable table -->
+    <!--Main form-->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../sources/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+    <script src="table.js"></script>
+  </body>
+</html>
